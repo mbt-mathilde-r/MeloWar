@@ -32,7 +32,7 @@ public class IAControlMove : MonoBehaviour
 
     private void generateNewMove()
     {
-        moveDuration = Random.rand(minMoveDuration, maxMoveDuration);
-        moveIndex = Random.rand(0, movableComponent.all.Length);
+        moveDuration = CustomRandom.rand(minMoveDuration, maxMoveDuration);
+        moveIndex = CustomRandom.rand(0, movableComponent.all.Length);
     }
 }

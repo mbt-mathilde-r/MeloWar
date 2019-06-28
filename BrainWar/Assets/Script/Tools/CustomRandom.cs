@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Random
+public class CustomRandom
 {
     public static int rand(int min, int max)
     {

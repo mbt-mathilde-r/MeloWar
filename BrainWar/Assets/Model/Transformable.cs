@@ -19,7 +19,6 @@ public abstract class Transformable : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        print("Start");
         all = new selfTransform[] { up, down, left, right };
     }
 
