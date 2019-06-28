@@ -2,6 +2,8 @@
 
 public class UserControlMove : MonoBehaviour
 {
+    public string userName;
+
     [SerializeField] private KeyCode upKey = KeyCode.W;
     [SerializeField] private KeyCode downKey = KeyCode.S;
     [SerializeField] private KeyCode leftKey = KeyCode.A;
@@ -38,6 +40,7 @@ public class UserControlMove : MonoBehaviour
     // Handle collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        print(collision.gameObject.GetComponent<UserControlMove>().userName);
         print(collision.GetComponent<Explosable>());
         collision.GetComponent<Explosable>().explode();
     }
