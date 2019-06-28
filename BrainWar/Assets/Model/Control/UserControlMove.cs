@@ -30,13 +30,15 @@ public class UserControlMove : MonoBehaviour
             {
                 rotableComponent.applyTranformation(i);
                 movableComponent.applyTranformation(Transformable.MethodIndex.Up);
+                return;
             }
         }
     }
-
+    
     // Handle collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
+        print(collision.GetComponent<Explosable>());
+        collision.GetComponent<Explosable>().explode();
     }
 }
